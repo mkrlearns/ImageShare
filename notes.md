@@ -4,13 +4,13 @@ Image
 - Title
 - URL
 - belongs_to :user
-- belongs_to :category
+- belongs_to :tag
 - has_many :likes
 - has_many :users, through :likes
 - has_many :comments
 - has_many :users, through :comments
 
-`rails g resource image title url user:belongs_to category:belongs_to --no-test-framework`
+`rails g resource image title url user:belongs_to tag:belongs_to --no-test-framework`
 
 User
 - username
@@ -21,7 +21,7 @@ User
 - has_many :liked_images, through :likes
 - has_many :comments
 - has_many :commented_images, through :comments
-- has_many :categories, through :images
+- has_many :tags, through :images
 
 `rails g resource user username email password_digest --no-test-framework`
 
