@@ -45,3 +45,9 @@ Tags
 - title
 
 `rails g resource tags title --no-test-framework`
+
+Image Tags
+- belongs_to :image
+- belongs_to :tag
+
+`rails g resource image_tags image:belongs_to tag:belongs_to --no-test-framework`
